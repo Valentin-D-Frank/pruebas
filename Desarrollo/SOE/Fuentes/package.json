@@ -5,8 +5,8 @@
     "main": "./test/suma.js",
     "scripts": {
         "test": "jest",
-        "dev": "nodemon ./test/suma.js",
-        "start": "node ./test/suma.js",
+        "dev": "nodemon index.js",
+        "start": "node index.js",
         "build": "node suma"
     },
     "repository": {
