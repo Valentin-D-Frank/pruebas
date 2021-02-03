@@ -1,7 +1,7 @@
 const express = require("express");
 const user = require("../controllers/user");
 const homework = require("../controllers/homework");
-const course = require("../controllers/course");
+const curso = require("../controllers/curso");
 
 const api = express.Router();
 const dbConnection = require("../connect");
@@ -62,7 +62,7 @@ api.get("/lista", (req, res) => {
 api.post("/user", user);
 api.post('/homework', homework);
 
-api.post('/course', course);
+api.post('/curso', curso);
 
 api.post("/login", (req, res) => {
     res.send("Registrado");

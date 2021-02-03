@@ -50,28 +50,31 @@ html(lang='es')
 
 
           #app
-          form(action='')
-
-            label(for='nombre' v-model='.name')
+          form(action='/dashboard' method = 'GET')
+          <script>
+            console.log("ENTRAMOS AL FORM")
+          </script>
+          
+            label(for='')
               | Nombre del curso
               span.asterisco *
               | :
-            input#nombre(type='text' required='' v-model='course.nombre_curso')
+            input(type='text' v-model='curso.nombre_curso' required='')
 
 
-            label(for='id usuario')
+            label(for='')
               | ID del usuario, ingrese su usuario
               span.asterisco *
               | :
-            input#nombre(type='text' required='' v-model='course.id_usuario')
+            input(type='text' v-model='curso.id_usuario' required='')
 
-            label(for='descripcc')
+            label(for='')
               | Descripción del curso
               span.asterisco *
               | :
-            input#nombre(type='text' required='' v-model='course.descripcion')
+            input(type='text' v-model='curso.descripcion' required='')
 
-            input(type='button' value='Crear curso' @click = 'crearCurso')
+            input#btn(type='submit' value='Crear Curso' @click = 'crearCurso')
 
         aside
           h3 Redes sociales
@@ -93,7 +96,11 @@ html(lang='es')
               input(type='submit' value='Enviar')
     // Pie de Pagina
     footer
-      #pieDePagina.container
+      span &copy; Todos los derechos reservados
+        script(src='https://cdn.jsdelivr.net/npm/vue/dist/vue.js')
+        script(src='https://unpkg.com/vue-router/dist/vue-router.js')
+        script(src='https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js')
+          #pieDePagina.container
         div
           h3 Sistema Organizativo Estudiantil (SOE)
         div
@@ -109,10 +116,11 @@ html(lang='es')
       #copyright
         | © Derechos reservados.
     script.
+      console.log("OIE TE HABLO DESDE LA PRISIONNNN");
       var app = new Vue({
                   el: '#app',
                   data: {
-                    course: {
+                    curso: {
                       nombre_curso: '',
                       id_usuario: '',
                       descripcion: ''
@@ -122,12 +130,13 @@ html(lang='es')
 
           methods: {
                     crearCurso() {
-                      axios.post('/course', {
-                        command: 'REGISTER_COURSE',
+                      axios.post('/curso', {
+                        command: 'REGISTER_CURSO',
                         transaction: this.course
                       })
                         .then(resp => {
                           const response = resp.data
+                          console.log('oeiwbvoiebwvewv');
                           console.log(response)
                         })
                     }
