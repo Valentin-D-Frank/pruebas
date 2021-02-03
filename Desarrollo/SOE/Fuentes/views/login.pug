@@ -1,0 +1,30 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title SOE - Login
+  link(rel='stylesheet' href='static/css/style_login.css')
+#imagen
+  img.img(src='static/img/logo.JPG' alt='')
+p Iniciar sesion
+section#formulario
+  form(action='')
+    label(for='email') Email
+    br
+    input#email(type='email' required='' autocomplete='off' autofocus='')
+    br
+    label(for='password') Contrase&ntilde;a
+    br
+    input#password(type='password' required='')
+    br
+    input#btn(type='submit' value='Acceder')
+    a.btn-volver(href='/')
+      span Regresar
+.new
+  | &iquest;Nuevo en Soe? 
+  a(href='/register') Crear una cuenta
+br
+br
+hr
+footer
+  span &copy; Todos los derechos reservados
