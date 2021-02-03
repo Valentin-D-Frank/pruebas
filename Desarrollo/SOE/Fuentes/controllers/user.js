@@ -28,12 +28,11 @@ function registerUser(req, res) {
                 newUsuario.nombre,
                 newUsuario.email,
                 newUsuario.password,
-                newUsuario.createAt,
             ],
             (err, result) => {
                 if (err) {
                     return res.status(200).send({
-                        status: "FAILED",
+                        status: "FAILED",          
                         message: err,
                     });
                 } else {

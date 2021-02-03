@@ -4,9 +4,14 @@
     "description": "software SOE",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
+        "test": "jest",
         "dev": "nodemon index.js",
-        "start": "node index.js"
+        "start": "node index.js",
+        "build": "node test/suma"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Valentin-D-Frank/pruebas.git"
     },
     "author": "Amezaga-code",
     "license": "ISC",
