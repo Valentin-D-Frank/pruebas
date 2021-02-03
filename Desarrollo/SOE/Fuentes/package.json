@@ -7,7 +7,7 @@
         "test": "jest",
         "dev": "nodemon index.js",
         "start": "node index.js",
-        "build": "node test/suma"
+        "build": "node ./test/suma"
     },
     "repository": {
         "type": "git",
