@@ -2,12 +2,12 @@
     "name": "soe",
     "version": "1.0.0",
     "description": "software SOE",
-    "main": "suma.js",
+    "main": "./test/suma.js",
     "scripts": {
         "test": "jest",
-        "dev": "nodemon suma.js",
-        "start": "node suma.js",
-        "build": "node ./test/suma"
+        "dev": "nodemon ./test/suma.js",
+        "start": "node ./test/suma.js",
+        "build": "node suma"
     },
     "repository": {
         "type": "git",
